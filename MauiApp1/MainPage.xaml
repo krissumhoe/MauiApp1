@@ -2,84 +2,94 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage">
-
-    <ScrollView>
+    <ScrollView
+        BackgroundColor="White"
+        MaximumWidthRequest="1080"
+        >
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+            Padding="50"
+            Spacing="5"
+            >
             <Image
-                Source="dotnet_bot.png"
+                Source="logo.png"
                 HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                Aspect="AspectFit"/>
 
             <Label
-                Text="Get Started"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+                Text="Login"
+                TextColor="Black"
+                HorizontalOptions="Center" 
+                FontSize="Large"/>
 
             <Label
                 Text="First Name"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="Medium"/>
 
-            <Entry x:Name="firstNameEntry"
-                Placeholder="e.g. John, Roe, ..."
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+            <Entry
+                Placeholder="John" 
+                Keyboard="Text" 
+                BackgroundColor="LightGray"
+                />
 
             <Label
                 Text="Last Name"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="Medium"/>
 
-            <Entry x:Name="lastNameEntry"
-                Placeholder="e.g. Doo, Loser, ..."
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+            <Entry 
+                Placeholder="Doe" 
+                Keyboard="Text" 
+                BackgroundColor="LightGray"/>
 
             <Label
                 Text="Username"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="Medium"/>
 
-            <Entry x:Name="usernameEntry"
-                Placeholder="e.g. myspace69, "
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+            <Entry 
+                Placeholder="Username" 
+                Keyboard="Text" 
+                BackgroundColor="LightGray"/>
 
             <Label
                 Text="Password"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="Medium"/>
 
-            <Entry x:Name="passwordEntry"
-                Placeholder=""
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
+            <Entry 
+                Placeholder="Password" 
+                IsPassword="True" 
+                BackgroundColor="LightGray"/>
 
             <Label
                 Text="Confirm Password"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
-
-            <Entry x:Name="confirmPasswordEntry"
-                Placeholder=""
-                TextChanged="OnEntryTextChanged"
-                Completed="OnEntryCompleted" />
-
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="Medium"
+                />
+            <Entry 
+                Placeholder="Confirm Password" 
+                IsPassword="True" 
+                BackgroundColor="LightGray"/>
+            <Label
+                Text="Already have an account? Sign in"
+                TextColor="DarkBlue"
+                HorizontalOptions="Start" 
+                FontSize="Small"
+            />
             <Button
                 x:Name="CounterBtn"
                 Text="Sign Up" 
+                BackgroundColor="LightBlue"
+                TextColor="Black"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
